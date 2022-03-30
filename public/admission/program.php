@@ -33,13 +33,16 @@ if (isset($_POST['basic_info_submit'])) {
 
                 <div class="row pt-2 ad-head">
                     <div class="col m-1">
+
+
+
                         <?php if (display_message()) {
                         ?>
                             <div class="bg-danger text-light  head"><?php display_message(); ?></div>
                         <?php
                         }
                         ?>
-                        <div class="bg-primary text-light  head">Basic Information</div>
+                        <div class="bg-primary text-light  head">Select Program And Campus  </div>
                         <div class="bg-light p-2 container-fluid">
                             <div class="row">
 
@@ -47,38 +50,22 @@ if (isset($_POST['basic_info_submit'])) {
                                     <form action="" method="post">
                                         <div class=" form-group">
                                             <label for="">
-                                                Name:
+                                            PROGRAM APPLYING FOR :
                                             </label>
+
+                                            <select name="program" id="" class="form-control">
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                         
                                             <input type="text" name="name" class="form-control" placeholder="Enter Your Name" value="<?php echo $name; ?>">
                                         </div>
                                 </div>
 
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Email:
-                                        </label>
-                                        <input type="email" name="email" class="form-control" placeholder="Enter Your Email" value="<?php echo $email; ?>">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Phone:
-                                        </label>
-                                        <input type="text" name="phone" class="form-control" placeholder="Enter Your Phone No." value="<?php echo $phone; ?>">
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Alternative Phone No.:
-                                        </label>
-                                        <input type="text" name="phone2" class="form-control" placeholder="Alternative Phone No." value="<?php echo $phone2; ?>">
-                                    </div>
-                                </div>
+                                
 
                                 <div class="col-12 text-right">
                                     <div class=" form-group">
@@ -91,8 +78,6 @@ if (isset($_POST['basic_info_submit'])) {
                         </div>
                     </div>
                 </div>
-
-
 
 
 

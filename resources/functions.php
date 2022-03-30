@@ -103,11 +103,20 @@ function user_register()
         $query = query("INSERT INTO users (name, email, phone,  password, rand, active,  created_at, updated_at) 
         VALUES ('{$name}', '{$email}', '{$phone}', '{$password}', '{$rand}', 1,   '{$date}',  '{$date}')");
         confirm($query);
+
+        $l = last();
       
+        $query = query("INSERT INTO personal_details (u_id, email,  created_at, updated_at) 
+        VALUES ('{$l}', '{$email}', '{$date}',  '{$date}')");
+        confirm($query);
+      
+
         if(confirm($query) == 1)
         {
         //   header("Location: https://paytm.me/S6O-xqA");
         echo "<script>alert('user registered successfully')</script>";
+        redirect('./login');
+
         } else 
         {
             echo "<script>alert('Something went wrong')</script>";
@@ -119,8 +128,6 @@ function user_register()
 
 function user_login()
 {
-
-
 
     $email =  escape_string($_POST['email']);
     $pass =  escape_string($_POST['password']);
@@ -142,13 +149,46 @@ function user_login()
             if ($password == $pass) {
                 echo "<script>alert('Login Successfull')</script>";
                 $_SESSION['email'] = $email;
-                header('location: ./');
+                echo "<script>alert('Login Successfull')</script>";
+                // header('location: ./');
+
+                redirect('./');
             } else {
                 echo "<script>alert('Wrong Password')</script>";
             }
         }
     } else {
         echo "<script>alert('Email not found')</script>";
+    }
+
+
+}
+
+
+
+
+function basic_info()
+{
+    $name = escape_string($_POST['name']);
+    $email = escape_string($_POST['email']);
+    $phone = escape_string($_POST['phone']);
+    $phone2 = escape_string($_POST['phone2']);
+
+    $eemail = $_SESSION['email'];
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("h:i:sa d-m-Y");
+
+
+    $query = query("UPDATE users SET name = '{$name}', phone = '{$phone}', phone2 = '{$phone2}', email = '{$email}', updated_at = '{$date}' WHERE email = '{$eemail}' ");
+    confirm($query);
+
+    if(confirm($query) == 1)
+    {
+        redirect("program");
+    } else {
+        set_message("Update Failed");
+        redirect("./");
     }
 
 

@@ -1,27 +1,52 @@
 <div class="gs-sidebar gs-col bg-dark" id="gs-sidebar">
                 <h1 class="pl-3 p-1">Admin</h1>
                 <ul class="gs-scroll pt-2">
-                    <a href="/">
-                        <li to="/"><i class="fa fa-home" aria-hidden="true"></i> Home</li>
+                    <a href="./">
+                        <li><i class="fa fa-sign-in" aria-hidden="true"></i> Basic Information</li>
                     </a>
-                    <a href="/admission">
+                    <a href="./program">
                         <li>
-                            <i class="fa fa-sign-in" aria-hidden="true"></i> Admission
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Programme
+                        </li>
+                    </a>
+                    <a href="./personal-details">
+                        <li>
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Personal Details
                         </li>
                     </a>
                     <a href="/blank">
                         <li>
-                            <i class="fa fa-sign-in" aria-hidden="true"></i> Blank Page
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Education Details
                         </li>
                     </a>
-
-                    <a data-toggle="collapse" href="#userinterface">
-                        <li><i class="fab fa-buffer"></i> User Interface</li>
+                    <a href="/blank">
+                        <li>
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Upload Documents
+                        </li>
                     </a>
-                    <ul class="collapse" id="userinterface">
-                        <a href="/buttons">
-                            <li>Buttons</li>
-                        </a>
-                    </ul>
+                    <a href="/blank">
+                        <li>
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Payments
+                        </li>
+                    </a>
+                    <a href="/blank">
+                        <li>
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Finish
+                        </li>
+                    </a>
+                   
                 </ul>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
