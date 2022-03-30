@@ -52,130 +52,91 @@ if (isset($_POST['personal_info_submit'])) {
                         <?php
                         }
                         ?>
-                        <div class="bg-primary text-light  head">Personal Details </div>
+                        <div class="bg-primary text-light  head">Upload Documents </div>
                         <div class="bg-light p-2 container-fluid">
                             <div class="row">
 
-                                <div class="col-sm-6 col-xs-12">
-                                    <form action="" method="post">
-                                        <div class=" form-group">
-                                            <label for="">
-                                                Name:
-                                            </label>
-                                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name" value="<?php echo $name; ?>" disabled>
-                                        </div>
-                                </div>
-
-                                <div class="col-sm-6 col-xs-12">
-                                    <form action="" method="post">
-                                        <div class=" form-group">
-                                            <label for="">
-                                                Email:
-                                            </label>
-                                            <input type="email" name="email" class="form-control" placeholder="Enter Your Email" value="<?php echo $email; ?>" disabled>
-                                        </div>
-                                </div>
-
-
+                           
                                 <div class="col-sm-6 col-xs-12">
                                     <div class=" form-group">
                                         <label for="">
-                                            Father Name:
+                                            SSC Marksheet
                                         </label>
-                                        <input type="text" name="fname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Mother Name:
-                                        </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php echo $fname; ?>">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Last Name:
-                                        </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-xs-12">
                                     <div class=" form-group">
                                         <label for="">
-                                            Parents Phone No.:
+                                            HSC Marksheet
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Enter Your Parent Phone No." value="<?php echo $fname; ?>">
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
                                     </div>
                                 </div>
-
-                                <div class="col-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Address
-                                        </label>
-                                        <textarea name="add" id="" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Address 2 
-                                        </label>
-                                        <textarea name="add2" id="" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Address 3
-                                        </label>
-                                        <textarea name="add3" id="" class="form-control"></textarea>
-                                    </div>
-                                </div>
-
 
                                 <div class="col-sm-6 col-xs-12">
                                     <div class=" form-group">
                                         <label for="">
-                                            City
+                                            Adhar Card 
                                         </label>
-                                        <input type="text" name="city" class="form-control" placeholder="Enter Your City" value="<?php echo $fname; ?>">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            PIN
-                                        </label>
-                                        <input type="text" name="pin" class="form-control" placeholder="Enter Your Pin" value="<?php echo $fname; ?>">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            State
-                                        </label>
-                                        <input type="text" name="state" class="form-control" placeholder="Enter Your State" value="<?php echo $fname; ?>">
-                                    </div>
-                                </div>
-                                
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class=" form-group">
-                                        <label for="">
-                                            Country
-                                        </label>
-                                        <input type="text" name="country" class="form-control" placeholder="Enter Your Country" value="<?php echo $fname; ?>">
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
                                     </div>
                                 </div>
 
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Pan Card
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
 
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Leaving Certificate
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Caste Certificate
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Domaciel Certificate
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Photo
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class=" form-group">
+                                        <label for="">
+                                            Signature
+                                        </label>
+                                        <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                    </div>
+                                </div>
 
 
 

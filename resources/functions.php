@@ -193,3 +193,104 @@ function basic_info()
 
 
 }
+
+
+
+function personal_info_submit()
+{
+    $fname = escape_string($_POST['fname']);
+    $mname = escape_string($_POST['mname']);
+    $lname = escape_string($_POST['lname']);
+    $pphone = escape_string($_POST['phone']);
+    $add_1 = escape_string($_POST['add']);
+    $add_2 = escape_string($_POST['add2']);
+    $add_3 = escape_string($_POST['add3']);
+    $city = escape_string($_POST['city']);
+    $pin = escape_string($_POST['pin']);
+    $state = escape_string($_POST['state']);
+    $country = escape_string($_POST['country']);
+
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("h:i:sa d-m-Y");
+
+
+    // $query = query("UPDATE users SET fname = '{$fname}', name = '{$mname}', name = '{$mname}', lname = '{$lname}', pphone = '{$pphone}', phone2 = '{$phone2}', email = '{$email}', updated_at = '{$date}' WHERE email = '{$eemail}' ");
+    // confirm($query);
+
+    // if(confirm($query) == 1)
+    // {
+    //     redirect("program");
+    // } else {
+    //     set_message("Update Failed");
+    //     redirect("./");
+    // }
+
+
+}
+
+
+function students()
+{
+    $select_query = query("SELECT * FROM users");
+    confirm($select_query);
+
+    if (mysqli_num_rows($select_query) > 0) {
+        $idd = 1;
+        while ($row = fetch_array($select_query)) {
+
+            $id = $row['id'];
+            $name = $row['name'];
+            $phone = $row['phone'];
+            $email = $row['email'];
+            $user = <<<DELIMETER
+        <tr>
+        <th scope="row">$idd</th>
+        <td>$name</td>
+        <td>$phone </td>
+        <td>$email</td>
+        <td>TY BSC IT</td>
+     
+        <td><a href="edit_customer.php?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
+    </tr>
+DELIMETER;
+
+            echo $user;
+            $idd++;
+        }
+    } else {
+        echo "not found";
+    }
+}
+
+
+
+function academics()
+{
+   
+            $user = <<<DELIMETER
+        <tr>
+        <th scope="row">1</th>
+        <td> BSC IT</td>
+        <td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+    </tr>
+    <tr>
+    <th scope="row">2</th>
+    <td> BSC CS</td>
+    <td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td> BSC </td>
+<td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+</tr>
+<tr>
+<th scope="row">4</th>
+<td> BA</td>
+<td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+</tr>
+DELIMETER;
+
+            echo $user;
+
+}
