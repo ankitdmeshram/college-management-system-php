@@ -14,7 +14,12 @@
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Academics
                         </li>
                     </a>
-                    <a href="./fees">
+                    <a href="./library">
+                        <li>
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Library
+                        </li>
+                    </a>
+                    <!-- <a href="./fees">
                         <li>
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Fees
                         </li>
@@ -23,7 +28,7 @@
                         <li>
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Examination
                         </li>
-                    </a>
+                    </a> -->
                     <a href="./users">
                         <li>
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Users

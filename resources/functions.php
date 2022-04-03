@@ -71,11 +71,9 @@ function user_register()
     $pass =  escape_string($_POST['password']);
     $c_password =  escape_string($_POST['c_password']);
 
-    if($pass != $c_password)
-    {
+    if ($pass != $c_password) {
         set_message("Password not matched");
         header("Location: register");
-
     }
 
     date_default_timezone_set("Asia/Calcutta");
@@ -105,26 +103,37 @@ function user_register()
         confirm($query);
 
         $l = last();
-      
+
         $query = query("INSERT INTO personal_details (u_id, email,  created_at, updated_at) 
         VALUES ('{$l}', '{$email}', '{$date}',  '{$date}')");
         confirm($query);
-      
 
-        if(confirm($query) == 1)
-        {
-        //   header("Location: https://paytm.me/S6O-xqA");
-        echo "<script>alert('user registered successfully')</script>";
-        redirect('./login');
 
-        } else 
-        {
+        if (confirm($query) == 1) {
+            //   header("Location: https://paytm.me/S6O-xqA");
+            echo "<script>alert('user registered successfully')</script>";
+            redirect('./login');
+        } else {
             echo "<script>alert('Something went wrong')</script>";
-
         }
     }
 }
 
+function add_book()
+{
+
+    $name = escape_string($_POST['name']);
+    $location = escape_string(($_POST['location']));
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("Y-m-d h:i:sa");
+
+    $query = query("INSERT INTO library (name, location, status, created_at) 
+    VALUES ('{$name}', '{$location}', 'Available', '{$date}')");
+    confirm($query);
+
+    redirect('library');
+
+}
 
 function user_login()
 {
@@ -160,8 +169,6 @@ function user_login()
     } else {
         echo "<script>alert('Email not found')</script>";
     }
-
-
 }
 
 
@@ -183,15 +190,12 @@ function basic_info()
     $query = query("UPDATE users SET name = '{$name}', phone = '{$phone}', phone2 = '{$phone2}', email = '{$email}', updated_at = '{$date}' WHERE email = '{$eemail}' ");
     confirm($query);
 
-    if(confirm($query) == 1)
-    {
+    if (confirm($query) == 1) {
         redirect("program");
     } else {
         set_message("Update Failed");
         redirect("./");
     }
-
-
 }
 
 
@@ -265,32 +269,114 @@ DELIMETER;
 
 
 
+function users()
+{
+    $select_query = query("SELECT * FROM users");
+    confirm($select_query);
+
+    if (mysqli_num_rows($select_query) > 0) {
+        $idd = 1;
+        while ($row = fetch_array($select_query)) {
+
+            $id = $row['id'];
+            $name = $row['name'];
+            $phone = $row['phone'];
+            $email = $row['email'];
+            $user = <<<DELIMETER
+        <tr>
+        <th scope="row">$idd</th>
+        <td>$name</td>
+        <td>$phone </td>
+        <td>$email</td>
+        <td>Student</td>
+     
+        <td><a href="edit_customer.php?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
+    </tr>
+DELIMETER;
+
+            echo $user;
+            $idd++;
+        }
+    } else {
+        echo "not found";
+    }
+}
+
+
+function library()
+{
+    $select_query = query("SELECT * FROM library");
+    confirm($select_query);
+
+    if (mysqli_num_rows($select_query) > 0) {
+        $idd = 1;
+        while ($row = fetch_array($select_query)) {
+
+            $id = $row['id'];
+            $name = $row['name'];
+            $location = $row['location'];
+            $status = $row['status'];
+            $user = <<<DELIMETER
+        <tr>
+        <th scope="row">$idd</th>
+        <td>$name</td>
+        <td>$location </td>
+        <td>$status </td>
+
+     
+        <td><a href="?edit_library=$id">View </a> | <a href="?delete_library=$id"> Delete </a></td>
+    </tr>
+DELIMETER;
+
+            echo $user;
+            $idd++;
+        }
+    } else {
+        echo "No Books  ";
+    }
+}
+
+function update_book()
+{
+    
+}
+
+
 function academics()
 {
-   
-            $user = <<<DELIMETER
+
+    $user = <<<DELIMETER
         <tr>
         <th scope="row">1</th>
         <td> BSC IT</td>
-        <td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+        <td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
     </tr>
     <tr>
     <th scope="row">2</th>
     <td> BSC CS</td>
-    <td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+    <td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
 </tr>
 <tr>
 <th scope="row">3</th>
 <td> BSC </td>
-<td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+<td><a href="edit-academics?id=">View </a> | <a href="?delete="> Delete </a></td>
 </tr>
 <tr>
 <th scope="row">4</th>
 <td> BA</td>
-<td><a href="edit_customer.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+<td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
 </tr>
 DELIMETER;
 
-            echo $user;
+    echo $user;
+}
+
+function delete_library($id)
+{
+    $query = query("DELETE FROM library WHERE id = '{$id}'");
+    confirm($query);
+
+    redirect('library');
+
 
 }
