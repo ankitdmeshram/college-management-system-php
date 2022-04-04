@@ -1,5 +1,6 @@
 body {
-    overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .gs-cont {
@@ -188,56 +189,203 @@ body {
 /* login and register */
 
 
-  
-  .gs-log {
+
+.gs-log {
     height: 100vh;
     padding: calc(100vh - 90vh) 10px;
-  }
-  .gs-log .col-lg-6 {
+}
+
+.gs-log .col-lg-6 {
     align-self: center;
-  }
-  
-  .gs-log h1 {
+}
+
+.gs-log h1 {
     font-weight: 800;
     font-size: 3rem;
     padding-bottom: 20px;
-  }
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
     .gs-log h1 {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  }
-  .gs-log h2 {
+}
+
+.gs-log h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: orange;
     padding-bottom: 20px;
-  }
-  .gs-log p {
+}
+
+.gs-log p {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.568);
     padding-bottom: 20px;
-  }
-  .gs-log a {
+}
+
+.gs-log a {
     font-size: 24px;
     padding: 10px 50px;
     font-weight: 600;
-  }
-  
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .gs-log .border-r {
-      border-right: 1px solid rgba(128, 128, 128, 0.219);
-      padding-right: 50px;
+        border-right: 1px solid rgba(128, 128, 128, 0.219);
+        padding-right: 50px;
     }
-  }
+}
 
 
 
 
 
-  .ad-head .head 
-  {
-      font-size: 1.3rem;
-      font-weight: 700;
-      padding: 15px 30px;
-  }
+.ad-head .head {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 15px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+.gs-h-nav nav {
+    padding: 15px 10px !important;
+}
+
+.gs-h-nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+
+}
+
+.gs-h-nav .navbar-nav .nav-item .nav-link {
+    padding: 5px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.gs-h-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.632)), url('../img/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.her-img {
+    width: 150px;
+    padding-top: 50px;
+
+}
+
+.cf {
+    padding: 150px 10px;
+
+}
+
+.cf h1 {
+    font-weight: 700;
+    color: white;
+    padding-top: 50px;
+}
+
+.cf p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cf p a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+
+}
+
+
+.gs-h-about
+{
+    padding: 100px 10px;
+    background-color: #8e8f8f0c;
+}
+.gs-h-about h2 
+{
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.gs-h-about p 
+{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+.gs-h-about p a 
+{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+.gs-h-notices 
+{
+    padding: 50px 10px;
+}
+.gs-h-notices h2
+{
+    text-align: center;
+    font-weight: 700;
+}
+.gs-h-notices .hei marquee
+{
+    height: 60vh;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.gs-h-notices .hei marquee li
+{
+    font-size: 18px;
+}
+
+
+.gs-h-pri-desk
+{
+    padding: 100px 10px;
+    background-color: #8e8f8f0c;
+}
+.gs-h-pri-desk h2 
+{
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.gs-h-pri-desk p 
+{
+    font-size: 18px;
+}
+
+
+footer 
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0px;
+}

@@ -23,37 +23,8 @@ include "includes/head.php";
         <div class="gs-body gs-col container-fluid bg-light" id="gs-body">
             <?php include "includes/nav.php"; ?>
             <div class="gs-content card m-3 p-3">
-                <h4>Students</h4>
-                <hr>
-
-
-                <a href="add_customer.php" class="btn btn-primary mb-3" style="width: fit-content">Add New</a>
-
-
-                <input class="form-control" id="myInput" type="text" placeholder="Search..">
-
-                <div class="gs-scroly" style="overflow: scroll">
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Phone No.</th>
-                                <th scope="col-3">Email</th>
-                                <th scope="col-3">Class</th>
-                                <th scope="col">Edit / Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody id="myTable">
-
-                            <?php 
-                            students(); 
-                            ?>
-
-                        </tbody>
-                    </table>
-                </div>
+              
+                    
 
             </div>
         </div>

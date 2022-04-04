@@ -71,13 +71,10 @@ if (isset($_POST['update'])) {
                     confirm($select_query);
 
                     if (mysqli_num_rows($select_query) > 0) {
-                        $idd = 1;
                         while ($row = fetch_array($select_query)) {
-
                             $name = $row['name'];
                             $location = $row['location'];
                             $status = $row['status'];
-
 
                 ?>
 
@@ -98,7 +95,7 @@ if (isset($_POST['update'])) {
                                     <div class="col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <label for="">Status</label>
-                                            <input type="text" name="location" class="form-control" value="<?php echo $status; ?>">
+                                            <input type="text" name="status" class="form-control" value="<?php echo $status; ?>">
                                             <input type="hidden" name="id" class="form-control" value="<?php echo $id; ?>">
                                         </div>
                                     </div>

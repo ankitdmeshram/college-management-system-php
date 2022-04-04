@@ -132,7 +132,6 @@ function add_book()
     confirm($query);
 
     redirect('library');
-
 }
 
 function user_login()
@@ -255,7 +254,7 @@ function students()
         <td>$email</td>
         <td>TY BSC IT</td>
      
-        <td><a href="edit_customer.php?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
+        <td><a href="edit-student?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
     </tr>
 DELIMETER;
 
@@ -324,7 +323,7 @@ function library()
         <td>$status </td>
 
      
-        <td><a href="?edit_library=$id">View </a> | <a href="?delete_library=$id"> Delete </a></td>
+        <td><a href="?edit_library=$id">Edit </a> | <a href="?delete_library=$id"> Delete </a></td>
     </tr>
 DELIMETER;
 
@@ -338,7 +337,26 @@ DELIMETER;
 
 function update_book()
 {
-    
+
+    $name = escape_string($_POST['name']);
+    $location = escape_string(($_POST['location']));
+    $status = escape_string(($_POST['status']));
+    $id = escape_string(($_POST['id']));
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("Y-m-d h:i:sa");
+
+    $query = query("UPDATE library SET name = '{$name}', location = '{$location}', status = '{$status}' WHERE id = '{$id}' ");
+    confirm($query);
+
+    if (confirm($query) == 1) {
+        redirect("library");
+    } else {
+        set_message("Update Failed");
+        redirect("./");
+    }
+
+    redirect('library');
 }
 
 
@@ -377,6 +395,4 @@ function delete_library($id)
     confirm($query);
 
     redirect('library');
-
-
 }
