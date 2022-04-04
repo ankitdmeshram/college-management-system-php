@@ -52,16 +52,10 @@ if (isset($_POST['basic_info_submit'])) {
                                             <label for="">
                                             PROGRAM APPLYING FOR :
                                             </label>
-
                                             <select name="program" id="" class="form-control">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
+                                                <option>Jr. College</option>
+                                                <option>Sr. College</option>
                                             </select>
-                                         
-                                            <input type="text" name="name" class="form-control" placeholder="Enter Your Name" value="<?php echo $name; ?>">
                                         </div>
                                 </div>
 
@@ -69,7 +63,8 @@ if (isset($_POST['basic_info_submit'])) {
 
                                 <div class="col-12 text-right">
                                     <div class=" form-group">
-                                        <button type="submit" class="btn btn-primary" name="basic_info_submit">Submit & Next</button>
+                                        <!-- <button type="submit" class="btn btn-primary" name="basic_info_submit">Submit & Next</button> -->
+                                        <a href="personal-details" class="btn btn-primary">Submit & Next</a>
                                     </div>
                                     </form>
                                 </div>
