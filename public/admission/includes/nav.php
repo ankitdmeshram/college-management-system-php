@@ -27,7 +27,7 @@
             </li>
           
             <li class="nav-item">
-                <a href="/signup" class="nav-link">
+                <a href="?logout" class="nav-link">
                     <i class="fa fa-sign-in" aria-hidden="true"></i> Logout</a>
             </li>
         </ul>

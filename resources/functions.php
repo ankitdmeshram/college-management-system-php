@@ -143,7 +143,7 @@ function user_login()
     date_default_timezone_set("Asia/Calcutta");
     $date =  date("h:i:sa d-m-Y");
 
-    $select_query = query("SELECT * FROM users WHERE email = '{$email}' ");
+    $select_query = query("SELECT * FROM users WHERE email = '{$email}'  ");
     confirm($select_query);
 
     if (mysqli_num_rows($select_query) > 0) {
@@ -153,17 +153,23 @@ function user_login()
             $rand = $row['rand'];
             $mod_pass = $pass . $rand;
             $pass = md5($mod_pass);
-            
+            $role = $row['role'];
+
 
             if ($password == $pass) {
-                echo "<script>alert('Login Successfull')</script>";
                 $_SESSION['email'] = $email;
-                echo "<script>alert('Login Successfull')</script>";
+                $_SESSION['role'] = $role;
                 // header('location: ./');
+                if($role == 2) 
+                {
+                    redirect('admission');
+                } else if ($role == 1)
+                {
+                    redirect('admin');
+                } else {
+                    redirect('./');
+                }
 
-
-
-                redirect('./');
             } else {
                 echo "<script>alert('Wrong Password')</script>";
             }
@@ -238,7 +244,7 @@ function personal_info_submit()
 
 function students()
 {
-    $select_query = query("SELECT * FROM users");
+    $select_query = query("SELECT * FROM users WHERE role = 2");
     confirm($select_query);
 
     if (mysqli_num_rows($select_query) > 0) {
@@ -284,13 +290,26 @@ function users()
             $name = $row['name'];
             $phone = $row['phone'];
             $email = $row['email'];
+            $role = $row['role'];
+            if($role == 1)
+            {
+                $role = 'Admin';
+            } else if($role == 2)
+            {
+                $role = 'Admission';
+            } else if($role == 3)
+            {
+                $role = 'Student';
+            } else {
+                $role = 'User';
+            }
             $user = <<<DELIMETER
         <tr>
         <th scope="row">$idd</th>
         <td>$name</td>
         <td>$phone </td>
         <td>$email</td>
-        <td>Student</td>
+        <td>$role</td>
      
         <td><a href="edit_customer.php?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
     </tr>
@@ -398,4 +417,12 @@ function delete_library($id)
     confirm($query);
 
     redirect('library');
+}
+
+function delete_user($id, $link)
+{
+    $query = query("DELETE FROM users WHERE id = '{$id}'");
+    confirm($query);
+
+    redirect($link);
 }

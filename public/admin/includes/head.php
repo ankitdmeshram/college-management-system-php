@@ -5,7 +5,7 @@ include "../includes/common.php";
 if(empty($_SESSION['email']))
 {
 
-    redirect("login");
+    redirect("../login");
 }
 
 ?>

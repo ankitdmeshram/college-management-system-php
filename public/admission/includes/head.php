@@ -2,11 +2,19 @@
 include "../includes/common.php";
 
 
-if(empty($_SESSION['email']))
-{
 
-    redirect("login");
+if($_SESSION['role'] != 2)
+{
+    echo "<script> alert('You do not have permission to visit admin panel') </script>";
+    redirect("../login");
 }
+
+if(isset($_GET['logout']))
+{
+    session_destroy();
+    redirect("./");
+}
+
 
 ?>
 

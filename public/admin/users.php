@@ -1,6 +1,11 @@
 <?php
 include "includes/head.php";
 
+if(isset($_GET['delete']))
+{
+
+    delete_user($_GET['delete'], 'users');
+}
 
 ?>
 
