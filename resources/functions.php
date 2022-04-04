@@ -73,7 +73,7 @@ function user_register()
 
     if ($pass != $c_password) {
         set_message("Password not matched");
-        header("Location: register");
+        header("Location: login");
     }
 
     date_default_timezone_set("Asia/Calcutta");
@@ -153,12 +153,15 @@ function user_login()
             $rand = $row['rand'];
             $mod_pass = $pass . $rand;
             $pass = md5($mod_pass);
+            
 
             if ($password == $pass) {
                 echo "<script>alert('Login Successfull')</script>";
                 $_SESSION['email'] = $email;
                 echo "<script>alert('Login Successfull')</script>";
                 // header('location: ./');
+
+
 
                 redirect('./');
             } else {
