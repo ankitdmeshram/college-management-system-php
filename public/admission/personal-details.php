@@ -82,8 +82,8 @@ if (isset($_POST['personal_info_submit'])) {
                                             <label for="">
                                                 Email:
                                             </label>
-                                            <input type="email"  class="form-control" placeholder="Enter Your Email" value="<?php echo $email; ?>" disabled>
-                                            <input type="hidden" name="email" class="form-control"  value="<?php echo $email; ?>" >
+                                            <input type="email" class="form-control" placeholder="Enter Your Email" value="<?php echo $email; ?>" disabled>
+                                            <input type="hidden" name="email" class="form-control" value="<?php echo $email; ?>">
                                         </div>
                                 </div>
 

@@ -108,6 +108,10 @@ function user_register()
         VALUES ('{$l}', '{$email}', '{$date}',  '{$date}')");
         confirm($query);
 
+        $query = query("INSERT INTO educational_details (u_id,  created_at, updated_at) 
+        VALUES ('{$l}',  '{$date}',  '{$date}')");
+        confirm($query);
+
 
         if (confirm($query) == 1) {
             //   header("Location: https://paytm.me/S6O-xqA");
@@ -233,6 +237,39 @@ function personal_info_submit()
 
     if(confirm($query) == 1)
     {
+        redirect("education-details");
+    } else {
+        set_message("Update Failed");
+        redirect("./");
+    }
+}
+
+
+function educational_submit()
+{
+    $eemail = escape_string($_POST['email']);
+    $fname = escape_string($_POST['fname']);
+    $mname = escape_string($_POST['mname']);
+    $lname = escape_string($_POST['lname']);
+    $pphone = escape_string($_POST['pphone']);
+    $add_1 = escape_string($_POST['add']);
+    $add_2 = escape_string($_POST['add2']);
+    $add_3 = escape_string($_POST['add3']);
+    $city = escape_string($_POST['city']);
+    $pin = escape_string($_POST['pin']);
+    $state = escape_string($_POST['state']);
+    $country = escape_string($_POST['country']);
+
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("h:i:sa d-m-Y");
+
+
+    $query = query("UPDATE personal_details SET fname = '{$fname}', mname = '{$mname}', lname = '{$lname}', pphone = '{$pphone}',  add_1 = '{$add_1}', add_2 = '{$add_2}',add_3 = '{$add_3}',city = '{$city}', pin_code = '{$pin}',state = '{$state}',country = '{$country}', updated_at = '{$date}' WHERE email = '{$eemail}' ");
+    confirm($query);
+
+    if(confirm($query) == 1)
+    {
         redirect("program");
     } else {
         set_message("Update Failed");
@@ -312,7 +349,7 @@ function users()
         <td>$email</td>
         <td>$role</td>
      
-        <td><a href="edit_customer.php?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
+        <td><a href="edit-user?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
     </tr>
 DELIMETER;
 

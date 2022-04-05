@@ -35,23 +35,21 @@
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                                <a class="nav-link" href="#about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
+                                <a class="nav-link" href="#notices">Notice</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="login">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="register">register</a>
+                            </li>
+                            
+                           
                         </ul>
 
                     </div>
@@ -80,7 +78,7 @@
     </div>
 
 
-    <section class="gs-h-about">
+    <section class="gs-h-about" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
@@ -108,7 +106,7 @@
 
 
 
-    <section class="gs-h-notices">
+    <section class="gs-h-notices" id="notices">
         <div class="container">
             <div class="row justify-content-center  ">
 

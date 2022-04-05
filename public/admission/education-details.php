@@ -26,7 +26,7 @@ if (mysqli_num_rows($select_query) > 0) {
 }
 
 if (isset($_POST['personal_info_submit'])) {
-    personal_info_submit();
+    educational_submit();
 }
 
 ?>
@@ -56,7 +56,7 @@ if (isset($_POST['personal_info_submit'])) {
                         <div class="bg-light p-2 container-fluid">
                             <div class="row">
 
-                            <div class="col-sm-12 col-xs-12">
+                                <div class="col-sm-12 col-xs-12">
                                     <form action="" method="post">
                                         <div class=" form-group">
                                             <h4 for="" class="bg-dark text-white p-2">
@@ -71,13 +71,7 @@ if (isset($_POST['personal_info_submit'])) {
                                             <label for="">
                                                 SSC Board
                                             </label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                            </select>
+                                            <input type="text" class="form-control" name="ssc_board">
                                         </div>
                                 </div>
 
@@ -87,7 +81,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $fname; ?>">
+                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -96,7 +90,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php ; ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -104,7 +98,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -113,7 +107,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -123,7 +117,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -132,7 +126,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -141,7 +135,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -150,7 +144,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -159,7 +153,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -196,7 +190,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $fname; ?>">
+                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -205,7 +199,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php ; ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -213,7 +207,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -222,7 +216,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -232,7 +226,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -241,7 +235,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -250,7 +244,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -259,7 +253,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php ; ?>">
                                     </div>
                                 </div>
 
@@ -268,7 +262,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php ; ?>">
                                     </div>
                                 </div>
 
