@@ -98,7 +98,7 @@
 
                 </div>
                 <div class="col-sm-6">
-                    <img src="img/box.png" class="img-fluid">
+                    <img src="img/chm.png" style="height: 100%" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -166,9 +166,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="img/box.png" alt="">
-                </div>
-                <div class="col-sm-6">
                     <h2>From The Principal's Desk
                     </h2>
                     <p style="color: green; font-weight: 700;">      "Success means having the courage, the determination, and the will to become the person you believe you were meant to be.” – George Sheehan
@@ -178,6 +175,10 @@
 
                     </p>
                 </div>
+                <div class="col-sm-6">
+                    <img src="img/pri.jpg" class="img-fluid" style="height: 100%" alt="">
+                </div>
+             
             </div>
         </div>
     </section>

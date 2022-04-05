@@ -141,8 +141,8 @@ if(isset($_POST['register']))
                     required
                   />
                   <label class="form-check-label" for="flexCheckChecked">
-                   I am agree to Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </label>
+                  I  agree to all terms and conditions.
+        </label>
                 </div>
               </div>
             </div>
