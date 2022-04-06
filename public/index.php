@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,9 +22,7 @@
                 <div class="container">
 
                     <a class="navbar-brand" href="#">College </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -48,30 +45,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="register">register</a>
                             </li>
-                            
-                           
                         </ul>
-
                     </div>
                 </div>
-
             </nav>
         </section>
-
-
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="text-center pt-5 cf">
                         <img src="img/valer-logo-white-150x150.png" class="img-fluid her-img" alt="">
-
                         <h1>Smt. Chandibai Himathmal Mansukhani College</h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, aliquid!</p>
-
                         <p><a href="#"> Explore with us</a></p>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -168,7 +155,7 @@
                 <div class="col-sm-6">
                     <h2>From The Principal's Desk
                     </h2>
-                    <p style="color: green; font-weight: 700;">      "Success means having the courage, the determination, and the will to become the person you believe you were meant to be.” – George Sheehan
+                    <p style="color: green; font-weight: 700;"> "Success means having the courage, the determination, and the will to become the person you believe you were meant to be.” – George Sheehan
 
                     </p>
                     <p>Smt. Chandibai Himathmal Mansukhani College is a reality envisioned by its founding fathers. In 1965, the College was initially established with an objective of satisfying the educational needs of the migrant Sindhi community but now it caters to students of almost all religions, communities and socio-economic backgrounds. The college has more than 10,000 students and more than 400 teaching and non-teaching staff at Junior College (Aided and Self-Financing), Degree College (Aided and Self-Financing), Post-Graduate and Research centres. We are fortunate to have both junior and degree college under one roof. We are an evolving Institution that believes in catering to the various emerging needs of the students.
@@ -178,7 +165,7 @@
                 <div class="col-sm-6">
                     <img src="img/pri.jpg" class="img-fluid" style="height: 100%" alt="">
                 </div>
-             
+
             </div>
         </div>
     </section>
@@ -201,15 +188,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

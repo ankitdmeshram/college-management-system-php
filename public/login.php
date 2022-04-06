@@ -1,71 +1,51 @@
 <?php
-
 include "../resources/config.php";
-
-
 if (isset($_POST['login'])) {
     user_login();
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Register - College Management System</title>
+    <title>Login - College Management System</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
     <section class="gs-log">
         <div class="container shadow pr-5 pb-5 pl-5">
-
             <?php
-
             if (!empty(display_message())) {
-
             ?>
-
                 <div class="row">
                     <div class="col">
                         <div class="text-center">
                             <h4 class="text-center" style="font-weight: 700; padding-bottom: 20px; padding-top: 40px; color :orange"> <?php display_message(); ?></h4>
-
                         </div>
                     </div>
                 </div>
             <?php
-
             }
             ?>
 
             <div class="row">
                 <div class="col-lg-6 border-r">
-
-
                     <h2>Login</h2>
                     <h5 class="pb-4">
                         Please Login To Continue Your Account.
                     </h5>
-
-
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
                                 <form action="" method="post">
-                                <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
+                                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email" required />
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
@@ -73,18 +53,16 @@ if (isset($_POST['login'])) {
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required />
                                 <label class="form-check-label" for="flexCheckChecked">
-                                    I  agree to all terms and conditions.
+                                    I agree to all terms and conditions.
                                 </label>
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
