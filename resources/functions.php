@@ -301,7 +301,7 @@ function students()
         <td>$email</td>
         <td>TY BSC IT</td>
      
-        <td><a href="edit-student?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
+        <td><a href="edit-user?id=$id">View </a> | <a href="?delete=$id"> Delete </a></td>
     </tr>
 DELIMETER;
 

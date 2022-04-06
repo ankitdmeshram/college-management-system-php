@@ -194,7 +194,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Father Name:
                                         </label>
-                                        <input type="text" name="fname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="text"  class="form-control" placeholder="Enter Your Father Name" value="<?php  ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -343,7 +343,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $fname; ?>">
+                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -352,7 +352,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php  ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -360,7 +360,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -369,7 +369,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -379,7 +379,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -388,7 +388,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -397,7 +397,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -406,7 +406,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -415,7 +415,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -452,7 +452,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $fname; ?>">
+                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -461,7 +461,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php  ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -469,7 +469,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $fname; ?>">
+                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -478,7 +478,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -488,7 +488,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -497,7 +497,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -506,7 +506,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -515,7 +515,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php  ?>">
                                     </div>
                                 </div>
 
@@ -524,7 +524,7 @@ if(isset($_GET['id']))
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
+                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php  ?>">
                                     </div>
                                 </div>
 
