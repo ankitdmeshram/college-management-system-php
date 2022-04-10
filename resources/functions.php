@@ -462,3 +462,23 @@ function delete_user($id, $link)
 
     redirect($link);
 }
+
+function add_academics()
+{
+    $course_name = escape_string($_POST['course_name']);
+    $duration = escape_string($_POST['duration']);
+    $semester = escape_string($_POST['semester']);
+    $fees = escape_string($_POST['fees']);
+    $cfees = escape_string($_POST['cfees']);
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("Y-m-d h:i:sa");
+
+
+    $query = query("INSERT INTO academics (	course_name, fees, c_fees, duration, semester, created_at, updated_at) 
+    VALUES ('{$course_name}', '{$fees}', '{$cfees}', '{$duration}', '{$semester}', '{$date}', '{$date}' )");
+    confirm($query);
+
+
+
+}
