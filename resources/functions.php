@@ -1,6 +1,5 @@
 <?php
 
-
 if (!$connection) {
     echo "<script>alert('Technical Error, Kindly Contact to your provider'); </script>";
 }
@@ -101,7 +100,7 @@ function user_register()
         $query = query("INSERT INTO users (name, email, phone,  password, rand, active,  created_at, updated_at) 
         VALUES ('{$name}', '{$email}', '{$phone}', '{$password}', '{$rand}', 1,   '{$date}',  '{$date}')");
         confirm($query);
-
+            
         $l = last();
 
         $query = query("INSERT INTO personal_details (u_id, email,  created_at, updated_at) 
@@ -125,7 +124,6 @@ function user_register()
 
 function add_book()
 {
-
     $name = escape_string($_POST['name']);
     $location = escape_string(($_POST['location']));
     date_default_timezone_set("Asia/Calcutta");
