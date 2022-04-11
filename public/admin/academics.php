@@ -1,6 +1,10 @@
 <?php
 include "includes/head.php";
 
+if(isset($_GET['delete_academics']))
+{
+    delete_academics($_GET['delete_academics']);
+}
 
 ?>
 
@@ -27,7 +31,7 @@ include "includes/head.php";
                 <hr>
 
 
-                <a href="add_customer.php" class="btn btn-primary mb-3" style="width: fit-content">Add New</a>
+                <a href="add-academics" class="btn btn-primary mb-3" style="width: fit-content">Add New</a>
 
 
                 <input class="form-control" id="myInput" type="text" placeholder="Search..">
@@ -39,6 +43,7 @@ include "includes/head.php";
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Course Name</th>
+                                <th scope="col">Jr/Sr </th>
                                 <th scope="col">Edit / Delete</th>
                             </tr>
                         </thead>

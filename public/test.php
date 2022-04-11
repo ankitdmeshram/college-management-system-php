@@ -37,19 +37,119 @@ if (mysqli_num_rows($query) > 0) {
         <tr>
         <td style="width: 50%">Phone 2</td>
         <td style="width: 50%">$phone2</td>
-    </tr>   
+    </tr>  
+<!-//////////////////////////////////->
+
+
+            <tr>
+                <td style="width: 50%">Name</td>
+                <td style="width: 50%">$phone2</td>
+            </tr>  
+            <tr>
+                <td style="width: 50%">Last Name</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Father's Name</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Mother' Name</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Parents Phone</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Address</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Address 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Address 3</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">City</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Pin</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> 
+
+            <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> <tr>
+            <td style="width: 50%">Phone 2</td>
+            <td style="width: 50%">$phone2</td>
+        </tr> 
+        <tr>
+                <td style="width: 50%">Phone 2</td>
+                <td style="width: 50%">$phone2</td>
+            </tr> <tr>
+            <td style="width: 50%">Phone 2</td>
+            <td style="width: 50%">$phone2</td>
+        </tr> 
       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         </table>
 DELIMETER;
 
         echo $html;
 
-        $mpdf = new \Mpdf\Mpdf();
-        $mpdf -> WriteHTML($html);
+        // $mpdf = new \Mpdf\Mpdf();
+        // $mpdf -> WriteHTML($html);
 
-        $file = time() . '.pdf';
+        // $file = time() . '.pdf';
 
-        $mpdf -> output($file, 'D');
+        // $mpdf -> output($file, 'D');
 
     }
 }

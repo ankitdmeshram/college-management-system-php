@@ -46,16 +46,47 @@ if (isset($_POST['basic_info_submit'])) {
                         <div class="bg-light p-2 container-fluid">
                             <div class="row">
 
-                                <div class="col-sm-6 col-xs-12">
+                            <div class="col-sm-6 col-xs-12">
                                     <form action="" method="post">
                                         <div class=" form-group">
                                             <label for="">
                                             PROGRAM APPLYING FOR :
                                             </label>
-                                            <select name="program" id="" class="form-control">
+                                            <select name="program" id="clg_type" class="form-control">
                                                 <option>Jr. College</option>
                                                 <option>Sr. College</option>
                                             </select>
+
+                                        </div>
+                                </div>
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <form action="" method="post">
+                                        <div class=" form-group">
+                                            <label for="">
+                                            Stream :
+                                            </label>
+
+                                            <script>
+
+                                                    typ = document.getElementById("clg_type").value
+                                                    // alert(typ);
+
+                                            </script>
+
+                                            <select name="program" id="clg_type" class="form-control">
+                                            <?php
+                                                    $query = query("SELECT * FROM academics");
+                                                    confirm($query);
+
+                                                    while($row = fetch_array($query))
+                                                    {
+                                                        echo "<option> " . $row['course_name'] . "</option>";
+                                                    }
+?>
+                                            
+                                            </select>
+
                                         </div>
                                 </div>
 

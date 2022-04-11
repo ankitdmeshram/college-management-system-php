@@ -421,30 +421,39 @@ function update_book()
 function academics()
 {
 
+
+    $select_query = query("SELECT * FROM academics");
+    confirm($select_query);
+
+    if (mysqli_num_rows($select_query) > 0) {
+        $idd = 1;
+        while ($row = fetch_array($select_query)) {
+
+            $course_name = $row['course_name'];
+            $fees = $row['fees'];
+            $id = $row['id'];
+            $c_fees = $row['c_fees'];
+            $duration = $row['duration'];
+            $semester = $row['semester'];
+            $type = $row['type'];
+
+
     $user = <<<DELIMETER
         <tr>
-        <th scope="row">1</th>
-        <td> BSC IT</td>
-        <td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
+        <th scope="row">$id</th>
+        <td> $course_name </td>
+        <td> $type </td>
+        <td><a href="edit-academics?id=$id">View </a> | <a href="?delete_academics=$id"> Delete </a></td>
     </tr>
-    <tr>
-    <th scope="row">2</th>
-    <td> BSC CS</td>
-    <td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
-</tr>
-<tr>
-<th scope="row">3</th>
-<td> BSC </td>
-<td><a href="edit-academics?id=">View </a> | <a href="?delete="> Delete </a></td>
-</tr>
-<tr>
-<th scope="row">4</th>
-<td> BA</td>
-<td><a href="academics.php?id=">View </a> | <a href="?delete="> Delete </a></td>
-</tr>
+    
 DELIMETER;
 
+
+
     echo $user;
+
+}}
+
 }
 
 function delete_library($id)
@@ -469,16 +478,52 @@ function add_academics()
     $duration = escape_string($_POST['duration']);
     $semester = escape_string($_POST['semester']);
     $fees = escape_string($_POST['fees']);
-    $cfees = escape_string($_POST['cfees']);
+    $c_fees = escape_string($_POST['c_fees']);
+    $type = escape_string($_POST['type']);
 
     date_default_timezone_set("Asia/Calcutta");
     $date =  date("Y-m-d h:i:sa");
 
 
-    $query = query("INSERT INTO academics (	course_name, fees, c_fees, duration, semester, created_at, updated_at) 
-    VALUES ('{$course_name}', '{$fees}', '{$cfees}', '{$duration}', '{$semester}', '{$date}', '{$date}' )");
+    $query = query("INSERT INTO academics (	course_name, fees, c_fees, duration, semester, type, created_at, updated_at) 
+    VALUES ('{$course_name}', '{$fees}', '{$c_fees}', '{$duration}', '{$semester}', '{$type}', '{$date}', '{$date}' )");
     confirm($query);
 
 
 
+}
+
+function update_academics()
+{
+    $id = escape_string($_POST['id']);
+    $course_name = escape_string($_POST['course_name']);
+    $duration = escape_string($_POST['duration']);
+    $semester = escape_string($_POST['semester']);
+    $fees = escape_string($_POST['fees']);
+    $c_fees = escape_string($_POST['c_fees']);
+    $type = escape_string($_POST['type']);
+
+    date_default_timezone_set("Asia/Calcutta");
+    $date =  date("Y-m-d h:i:sa");
+
+    $query = query("UPDATE academics SET course_name = '{$course_name}', duration = '{$duration}', semester = '{$semester}', fees = '{$fees}', c_fees = '{$c_fees}', type = '{$type}' WHERE id = '{$id}' ");
+    confirm($query);
+
+    if (confirm($query) == 1) {
+        redirect("academics");
+    } else {
+        set_message("Update Failed");
+        redirect("./");
+    }
+
+
+}
+
+
+function delete_academics($id)
+{
+    $query = query("DELETE FROM academics WHERE id = '{$id}'");
+    confirm($query);
+
+    redirect('academics');
 }

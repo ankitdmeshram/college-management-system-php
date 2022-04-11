@@ -59,7 +59,18 @@ if(isset($_POST['submit']))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="">Total Fees (For Caste)</label>
-                                    <input type="text" name="cfees" placeholder="Total Fees" class="form-control" id="">
+                                    <input type="text" name="c_fees" placeholder="Total Fees" class="form-control" id="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="">Type</label>
+
+                                    <select name="type" class="form-control">
+                                        <option > Jr. College</option>
+                                        <option > Sr. College</option>
+                                    </select>
+
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -71,16 +82,6 @@ if(isset($_POST['submit']))
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="bg-primary text-light  p-3 bold"> Subjects </div>
-
-                            </div>
-
-
-                          
-
-                        </div>
 
                     </div>
                 </div>
