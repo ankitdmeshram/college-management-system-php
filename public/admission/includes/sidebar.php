@@ -29,7 +29,7 @@
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Payments
                         </li>
                     </a>
-                    <a href="/blank">
+                    <a href="./finish">
                         <li>
                             <i class="fa fa-sign-in" aria-hidden="true"></i> Finish
                         </li>

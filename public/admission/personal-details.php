@@ -109,7 +109,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Last Name:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php echo $lname; ?>">
+                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Last Name" value="<?php echo $lname; ?>">
                                     </div>
                                 </div>
 

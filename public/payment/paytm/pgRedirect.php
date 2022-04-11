@@ -14,6 +14,7 @@ $CUST_ID = $_POST["CUST_ID"];
 $INDUSTRY_TYPE_ID = $_POST["INDUSTRY_TYPE_ID"];
 $CHANNEL_ID = $_POST["CHANNEL_ID"];
 $TXN_AMOUNT = $_POST["TXN_AMOUNT"];
+$us_id = $_POST['us_id'];
 
 // Create an array having all required parameters for creating checksum.
 $paramList["MID"] = PAYTM_MERCHANT_MID;
@@ -23,7 +24,8 @@ $paramList["INDUSTRY_TYPE_ID"] = $INDUSTRY_TYPE_ID;
 $paramList["CHANNEL_ID"] = $CHANNEL_ID;
 $paramList["TXN_AMOUNT"] = $TXN_AMOUNT;
 $paramList["WEBSITE"] = PAYTM_MERCHANT_WEBSITE;
-
+// $paramList["us_id"] = $us_id;
+$paramList["CALLBACK_URL"] = "http://localhost/college-management-system/public/admission/finish";
 /*
 $paramList["CALLBACK_URL"] = "http://localhost/PaytmKit/pgResponse.php";
 $paramList["MSISDN"] = $MSISDN; //Mobile number of customer
@@ -52,6 +54,8 @@ $checkSum = getChecksumFromArray($paramList,PAYTM_MERCHANT_KEY);
 			}
 			?>
 			<input type="hidden" name="CHECKSUMHASH" value="<?php echo $checkSum ?>">
+			<input type="hidden" name="us_id" value="<?php echo $us_id; ?>">
+
 			</tbody>
 		</table>
 		<script type="text/javascript">

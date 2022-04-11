@@ -47,24 +47,11 @@ if (isset($_POST['basic_info_submit'])) {
                             <div class="row">
 
                             <div class="col-sm-6 col-xs-12">
+                              
                                     <form action="" method="post">
                                         <div class=" form-group">
                                             <label for="">
-                                            PROGRAM APPLYING FOR :
-                                            </label>
-                                            <select name="program" id="clg_type" class="form-control">
-                                                <option>Jr. College</option>
-                                                <option>Sr. College</option>
-                                            </select>
-
-                                        </div>
-                                </div>
-
-                                <div class="col-sm-6 col-xs-12">
-                                    <form action="" method="post">
-                                        <div class=" form-group">
-                                            <label for="">
-                                            Stream :
+                                            Course :
                                             </label>
 
                                             <script>

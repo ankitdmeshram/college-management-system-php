@@ -39,12 +39,8 @@ if (isset($_POST['personal_info_submit'])) {
             <?php include "includes/nav.php"; ?>
             <div class="gs-content card m-3 p-3">
 
-
-
                 <div class="row pt-2 ad-head">
                     <div class="col m-1">
-
-
 
                         <?php if (display_message()) {
                         ?>
@@ -56,7 +52,7 @@ if (isset($_POST['personal_info_submit'])) {
                         <div class="bg-light p-2 container-fluid">
                             <div class="row">
 
-                           
+
                                 <div class="col-sm-6 col-xs-12">
                                     <div class=" form-group">
                                         <label for="">
@@ -78,7 +74,7 @@ if (isset($_POST['personal_info_submit'])) {
                                 <div class="col-sm-6 col-xs-12">
                                     <div class=" form-group">
                                         <label for="">
-                                            Adhar Card 
+                                            Adhar Card
                                         </label>
                                         <input type="file" name="pphone" class="form-control" placeholder="School Country." value="<?php echo $fname; ?>">
                                     </div>
@@ -142,7 +138,8 @@ if (isset($_POST['personal_info_submit'])) {
 
                                 <div class="col-12 text-right">
                                     <div class=" form-group">
-                                        <button type="submit" class="btn btn-primary" name="personal_info_submit">Submit & Next</button>
+                                        <!-- <button type="submit" class="btn btn-primary" name="personal_info_submit">Submit & Next</button> -->
+                                        <a href="payments" class="btn btn-primary">Submit & Next</a>
                                     </div>
                                     </form>
                                 </div>

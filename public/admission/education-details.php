@@ -2,31 +2,49 @@
 
 $eemail = $_SESSION['email'];
 
-$select_query = query("SELECT * FROM personal_details WHERE email = '{$eemail}' ");
-confirm($select_query);
-
-if (mysqli_num_rows($select_query) > 0) {
-    while ($row = fetch_array($select_query)) {
-
-        $email = $row['email'];
-        $fname = $row['fname'];
-    }
-}
-
 $select_query = query("SELECT * FROM users WHERE email = '{$eemail}' ");
 confirm($select_query);
 
 if (mysqli_num_rows($select_query) > 0) {
     while ($row = fetch_array($select_query)) {
 
-        $name = $row['name'];
-        $email = $row['email'];
-        $phone2 = $row['phone2'];
+        $id = $row['id'];
     }
 }
 
-if (isset($_POST['personal_info_submit'])) {
-    educational_submit();
+$select_query = query("SELECT * FROM educational_details WHERE u_id = '{$id}' ");
+confirm($select_query);
+
+if (mysqli_num_rows($select_query) > 0) {
+    while ($row = fetch_array($select_query)) {
+
+        $ssc_board = $row['ssc_board'];
+        $ssc_passing_year = $row['ssc_passing_year'];
+        $ssc_percentage = $row['ssc_percentage'];
+        $ssc_grade = $row['ssc_grade'];
+        $ssc_total = $row['ssc_total'];
+        $ssc_out = $row['ssc_out'];
+        $ssc_school = $row['ssc_school'];
+        $ssc_destrict = $row['ssc_destrict'];
+        $ssc_state = $row['ssc_state'];
+        $ssc_country = $row['ssc_country'];
+        $hsc_board = $row['hsc_board'];
+        $hsc_passing_year = $row['hsc_passing_year'];
+        $hsc_percentage = $row['hsc_percentage'];
+        $hsc_grade = $row['hsc_grade'];
+        $hsc_total = $row['hsc_total'];
+        $hsc_out = $row['hsc_out'];
+        $hsc_school = $row['hsc_school'];
+        $hsc_district = $row['hsc_district'];
+        $hsc_state = $row['hsc_state'];
+        $hsc_country = $row['hsc_country'];
+       
+     
+    }
+}
+
+if (isset($_POST['educational_details_submit'])) {
+    educational_details_submit();
 }
 
 ?>
@@ -71,7 +89,8 @@ if (isset($_POST['personal_info_submit'])) {
                                             <label for="">
                                                 SSC Board
                                             </label>
-                                            <input type="text" class="form-control" name="ssc_board">
+                                            <input type="text" class="form-control" name="ssc_board" value="<?php echo $ssc_board; ?>">
+                                            <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
                                         </div>
                                 </div>
 
@@ -81,7 +100,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php ; ?>">
+                                        <input type="text" name="ssc_passing_year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $ssc_passing_year; ?>">
                                     </div>
                                 </div>
 
@@ -90,7 +109,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php ; ?>">
+                                        <input type="text" name="ssc_percentage" class="form-control" placeholder="Enter Your %" value="<?php echo $ssc_percentage; ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -98,7 +117,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php ; ?>">
+                                        <input type="text" name="ssc_grade" class="form-control" placeholder="" value="<?php echo $ssc_grade; ?>">
                                     </div>
                                 </div>
 
@@ -107,7 +126,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php ; ?>">
+                                        <input type="text" name="ssc_total" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $ssc_total; ?>">
                                     </div>
                                 </div>
 
@@ -117,7 +136,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php ; ?>">
+                                        <input type="text" name="ssc_out" class="form-control" placeholder="Out Of." value="<?php echo $ssc_out; ?>">
                                     </div>
                                 </div>
 
@@ -126,7 +145,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php ; ?>">
+                                        <input type="text" name="ssc_school" class="form-control" placeholder="School Name." value="<?php echo $ssc_school; ?>">
                                     </div>
                                 </div>
 
@@ -135,7 +154,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php ; ?>">
+                                        <input type="text" name="ssc_destrict" class="form-control" placeholder="School District." value="<?php echo $ssc_destrict; ?>">
                                     </div>
                                 </div>
 
@@ -144,7 +163,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php ; ?>">
+                                        <input type="text" name="ssc_state" class="form-control" placeholder="School State." value="<?php echo $ssc_state; ?>">
                                     </div>
                                 </div>
 
@@ -153,14 +172,13 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php ; ?>">
+                                        <input type="text" name="ssc_country" class="form-control" placeholder="School Country." value="<?php echo $ssc_country; ?>">
                                     </div>
                                 </div>
 
 
 
                                 <div class="col-sm-12 col-xs-12">
-                                    <form action="" method="post">
                                         <div class=" form-group">
                                             <h4 for="" class="bg-dark text-white p-2">
                                                 HSC Details
@@ -174,13 +192,8 @@ if (isset($_POST['personal_info_submit'])) {
                                             <label for="">
                                                 HSC Board
                                             </label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                                <option value="">Maharashtra</option>
-                                            </select>
+                                       
+                                            <input type="tel" name="hsc_board" class="form-control" id="" value="<?php echo $hsc_board; ?>">
                                         </div>
                                 </div>
 
@@ -190,7 +203,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Passing Year:
                                         </label>
-                                        <input type="text" name="year" class="form-control" placeholder="Enter Your Passing Year" value="<?php ; ?>">
+                                        <input type="text" name="hsc_passing_year" class="form-control" placeholder="Enter Your Passing Year" value="<?php echo $hsc_passing_year; ?>">
                                     </div>
                                 </div>
 
@@ -199,7 +212,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Percentage %:
                                         </label>
-                                        <input type="text" name="mname" class="form-control" placeholder="Enter Your Mother Name" value="<?php ; ?>">
+                                        <input type="text" name="hsc_percentage" class="form-control" placeholder="" value="<?php echo $hsc_percentage; ?>">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
@@ -207,7 +220,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Grade:
                                         </label>
-                                        <input type="text" name="lname" class="form-control" placeholder="Enter Your Father Name" value="<?php ; ?>">
+                                        <input type="text" name="hsc_grade" class="form-control" placeholder="" value="<?php echo $hsc_grade; ?>">
                                     </div>
                                 </div>
 
@@ -216,7 +229,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Total Marks Obtained:
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Total Marks Obtained:." value="<?php ; ?>">
+                                        <input type="text" name="hsc_total" class="form-control" placeholder="Total Marks Obtained:." value="<?php echo $hsc_total; ?>">
                                     </div>
                                 </div>
 
@@ -226,7 +239,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Out Of
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="Out Of." value="<?php ; ?>">
+                                        <input type="text" name="hsc_out" class="form-control" placeholder="Out Of." value="<?php echo $hsc_out; ?>">
                                     </div>
                                 </div>
 
@@ -235,7 +248,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             School Name
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Name." value="<?php ; ?>">
+                                        <input type="text" name="hsc_school" class="form-control" placeholder="School Name." value="<?php echo $hsc_school; ?>">
                                     </div>
                                 </div>
 
@@ -244,7 +257,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             District
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School District." value="<?php ; ?>">
+                                        <input type="text" name="hsc_district" class="form-control" placeholder="School District." value="<?php echo $hsc_district; ?>">
                                     </div>
                                 </div>
 
@@ -253,7 +266,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             State
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School State." value="<?php ; ?>">
+                                        <input type="text" name="hsc_state" class="form-control" placeholder="School State." value="<?php echo $hsc_state; ?>">
                                     </div>
                                 </div>
 
@@ -262,7 +275,7 @@ if (isset($_POST['personal_info_submit'])) {
                                         <label for="">
                                             Country
                                         </label>
-                                        <input type="text" name="pphone" class="form-control" placeholder="School Country." value="<?php ; ?>">
+                                        <input type="text" name="hsc_country" class="form-control" placeholder="School Country." value="<?php echo $ssc_country; ?>">
                                     </div>
                                 </div>
 
@@ -270,7 +283,7 @@ if (isset($_POST['personal_info_submit'])) {
 
                                 <div class="col-12 text-right">
                                     <div class=" form-group">
-                                        <button type="submit" class="btn btn-primary" name="personal_info_submit">Submit & Next</button>
+                                        <button type="submit" class="btn btn-primary" name="educational_details_submit">Submit & Next</button>
                                     </div>
                                     </form>
                                 </div>

@@ -527,3 +527,70 @@ function delete_academics($id)
 
     redirect('academics');
 }
+
+
+function educational_details_submit()
+{
+    $id = escape_string($_POST['id']);
+    $ssc_board = escape_string($_POST['ssc_board']);
+    $ssc_passing_year = escape_string($_POST['ssc_passing_year']);
+    $ssc_percentage = escape_string($_POST['ssc_percentage']);
+    $ssc_grade = escape_string($_POST['ssc_grade']);
+    $ssc_total = escape_string($_POST['ssc_total']);
+    $ssc_out = escape_string($_POST['ssc_out']);
+    $ssc_school = escape_string($_POST['ssc_school']);
+    $ssc_destrict = escape_string($_POST['ssc_destrict']);
+    $ssc_state = escape_string($_POST['ssc_state']);
+    $ssc_country = escape_string($_POST['ssc_country']);
+    $hsc_board = escape_string($_POST['hsc_board']);
+    $hsc_passing_year = escape_string($_POST['hsc_passing_year']);
+    $hsc_percentage = escape_string($_POST['hsc_percentage']);
+    $hsc_grade = escape_string($_POST['hsc_grade']);
+    $hsc_total = escape_string($_POST['hsc_total']);
+    $hsc_out = escape_string($_POST['hsc_out']);
+    $hsc_school = escape_string($_POST['hsc_school']);
+    $hsc_district = escape_string($_POST['hsc_district']);
+    $hsc_state = escape_string($_POST['hsc_state']);
+    $hsc_country = escape_string($_POST['hsc_country']);
+
+
+    $query = query("UPDATE educational_details SET 
+
+    ssc_board = '{$ssc_board}',
+    ssc_passing_year = '{$ssc_passing_year}',
+    ssc_percentage = '{$ssc_percentage}',
+    ssc_grade = '{$ssc_grade}',
+    ssc_total = '{$ssc_total}',
+    ssc_out = '{$ssc_out}',
+    ssc_school = '{$ssc_school}',
+    ssc_destrict = '{$ssc_destrict}',
+    ssc_state = '{$ssc_state}',
+    ssc_country = '{$ssc_country}',
+    hsc_board = '{$hsc_board}',
+    hsc_passing_year = '{$hsc_passing_year}',
+    hsc_percentage = '{$hsc_percentage}',
+    hsc_grade = '{$hsc_grade}',
+    hsc_total = '{$hsc_total}',
+    hsc_out = '{$hsc_out}',
+    hsc_school = '{$hsc_school}',
+    hsc_district = '{$hsc_district}',
+    hsc_state = '{$hsc_state}',
+    hsc_country = '{$hsc_country}'
+
+    
+    WHERE u_id = '{$id}' ");
+
+    confirm($query);
+
+
+    if (confirm($query) == 1) {
+        redirect("upload-documentsw");
+        echo "<script>alert('working fine')</script>";
+    } else {
+        set_message("Update Failed");
+        redirect("./");
+    }
+
+
+   
+}

@@ -18,7 +18,7 @@ confirm($select_query);
 
 if (mysqli_num_rows($select_query) > 0) {
     while ($row = fetch_array($select_query)) {
-
+        $id = $row['id'];
         $name = $row['name'];
         $email = $row['email'];
         $phone2 = $row['phone2'];
@@ -71,7 +71,7 @@ if (isset($_POST['personal_info_submit'])) {
                         <input type="hidden" id="INDUSTRY_TYPE_ID" tabindex="4" maxlength="12" size="12" name="INDUSTRY_TYPE_ID" autocomplete="off" value="Retail">
                                    
                         <input id="CUST_ID" tabindex="2"   type="hidden" maxlength="12" size="12" name="CUST_ID" autocomplete="off" value="<?php echo  rand(10000,99999999)?>">
-                        
+                        <input type="hidden" name="us_id" value=<?php echo $id; ?>>
                         <input type="checkbox" name="" class="form-checkbox" id=""> <label for="">I hearby that i have accepted the all terms and conditions</label>
 
                                     </div>
